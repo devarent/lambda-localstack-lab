@@ -48,7 +48,7 @@ resource "aws_db_instance" "lambda_rds" {
   tags = {
     Name        = "lambda-rds-instance"
     Environment = "development"
-    Project     = "Pert 5 - Lambda"
+    Project     = "aws-lambda-practicum"
   }
 }
 

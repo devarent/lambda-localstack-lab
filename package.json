@@ -1,12 +1,12 @@
 {
-  "name": "pert-5-aws-lambda",
+  "name": "aws-lambda-practicum",
   "version": "1.0.0",
   "description": "AWS Lambda Praktikum Pertemuan 5 - Cloud Computing",
   "main": "index.mjs",
   "type": "module",
   "scripts": {
     "start": "node local_server.mjs",
-    "test": "node local_server.mjs & curl -i http://localhost:3000"
+    "test": "node --test tests/handler.test.mjs"
   },
   "keywords": [
     "aws",

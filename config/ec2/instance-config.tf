@@ -37,7 +37,7 @@ resource "aws_instance" "lambda_ec2" {
   tags = {
     Name        = "lambda-ec2-instance"
     Environment = "development"
-    Project     = "Pert 5 - Lambda"
+    Project     = "aws-lambda-practicum"
   }
 
   # Security Group

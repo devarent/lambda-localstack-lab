@@ -19,7 +19,7 @@
 
 #### Option A: Menggunakan HTTPS (Dengan Personal Access Token)
 ```bash
-cd "C:\laragon\www\Pert 5 - Lambda"
+cd "C:\laragon\www\aws-lambda-practicum"
 git remote set-url origin https://github.com/aryafatthurahman4-collab/pert-5-lambda.git
 git push -u origin main
 ```
@@ -41,7 +41,7 @@ Jika diminta username & password:
 
 #### Option B: Menggunakan SSH (Jika sudah setup SSH key)
 ```bash
-cd "C:\laragon\www\Pert 5 - Lambda"
+cd "C:\laragon\www\aws-lambda-practicum"
 git remote set-url origin git@github.com:aryafatthurahman4-collab/pert-5-lambda.git
 git push -u origin main
 ```

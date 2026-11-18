@@ -1,12 +1,9 @@
-version: '3.8'
-
 services:
   # LocalEmu - AWS Cloud Emulator
   localemu:
     image: localemu/localemu:latest
-    container_name: localemu
     ports:
-      - "4566:4566"      # Main gateway
+      - "${LOCAL_EMULATOR_PORT:-4566}:4566"      # Main gateway
       - "4510-4559:4510-4559"  # External service ports
     environment:
       - DASHBOARD_API_OPEN=1
@@ -22,14 +19,13 @@ services:
   # RDS MySQL (Simulation)
   mysql:
     image: mysql:8.0
-    container_name: rds-mysql-local
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: lambda_db
       MYSQL_USER: lambda_user
       MYSQL_PASSWORD: lambda_password
     ports:
-      - "3306:3306"
+      - "${LOCAL_MYSQL_PORT:-13306}:3306"
     volumes:
       - mysql-data:/var/lib/mysql
     networks:
@@ -38,9 +34,8 @@ services:
   # Simple web server untuk testing
   lambda-web:
     build: .
-    container_name: lambda-web-local
     ports:
-      - "9000:9000"
+      - "${LOCAL_WEB_PORT:-9000}:9000"
     depends_on:
       - localemu
     networks:

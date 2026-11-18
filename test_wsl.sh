@@ -8,7 +8,7 @@ echo "========================================================"
 # Ganti dengan Function URL AWS Lambda Anda dari AWS Console (jika masih aktif)
 # Contoh: AWS_LAMBDA_URL="https://xxxxxxxx.lambda-url.ap-southeast-3.on.aws/"
 AWS_LAMBDA_URL="$1"
-LOCAL_URL="http://localhost:3000"
+LOCAL_URL="http://localhost:9000"
 
 if [ -n "$AWS_LAMBDA_URL" ]; then
     echo "[1] Menguji AWS Lambda Cloud Function URL: $AWS_LAMBDA_URL"
@@ -19,7 +19,7 @@ else
 fi
 
 echo ""
-echo "[2] Menguji Server Lambda Lokal (port 3000):"
+echo "[2] Menguji Server Lambda Lokal (port 9000):"
 if curl -s --head --request GET "$LOCAL_URL" | grep "200 OK" > /dev/null; then
     echo "✓ Server lokal aktif dan merespons HTTP 200 OK!"
     echo "Tampilan awal konten:"

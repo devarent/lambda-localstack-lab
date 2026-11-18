@@ -15,7 +15,7 @@ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 export AWS_DEFAULT_REGION=us-east-1
 
 # Masuk ke folder proyek
-cd "/mnt/c/laragon/www/Pert 5 - Lambda" || exit 1
+cd "/mnt/c/laragon/www/aws-lambda-practicum" || exit 1
 
 # Cek apakah LocalEmu berjalan
 if ! curl -s http://localhost:4566/_localemu/health > /dev/null; then

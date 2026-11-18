@@ -28,7 +28,7 @@
 ## Tahap 1: Menjalankan AWS Lambda Lokal
 
 ### Langkah-langkah:
-1. Buka terminal di folder proyek: `cd "C:\laragon\www\Pert 5 - Lambda"`
+1. Buka terminal di folder proyek: `cd "C:\laragon\www\aws-lambda-practicum"`
 2. Jalankan server: `node local_server.mjs`
 3. Server berjalan di: `http://localhost:9000`
 
@@ -108,12 +108,12 @@ curl -i http://localhost:9000
 
 File proyek dapat diakses langsung dari WSL 2 melalui path:
 ```
-/mnt/c/laragon/www/Pert 5 - Lambda
+/mnt/c/laragon/www/aws-lambda-practicum
 ```
 
 Pengujian dari WSL 2:
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 curl -i http://localhost:9000
 ```
 

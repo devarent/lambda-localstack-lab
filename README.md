@@ -11,12 +11,12 @@
 Anda **TIDAK PERLU repot memindahkan file**!  
 Windows dan Ubuntu WSL 2 sudah terhubung langsung melalui folder mount `/mnt/c/`.
 
-* **Di Windows**: `C:\laragon\www\Pert 5 - Lambda`
-* **Di Ubuntu WSL 2**: `/mnt/c/laragon/www/Pert 5 - Lambda`
+* **Di Windows**: `C:\laragon\www\aws-lambda-practicum`
+* **Di Ubuntu WSL 2**: `/mnt/c/laragon/www/aws-lambda-practicum`
 
 Cukup buka terminal Ubuntu Anda, lalu ketik:
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 ls -la
 ```
 Semua file (`index.mjs`, `index.html`, `Dockerfile`, dll.) sudah langsung ada di sana!
@@ -34,7 +34,7 @@ Anda bisa mereplikasi seluruh tahapan ini 100% di Ubuntu WSL 2 dengan simulator 
 ### Langkah A: Menjalankan di Terminal Ubuntu WSL 2
 Buka terminal Ubuntu WSL 2:
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 node local_server.mjs
 ```
 *(Atau menggunakan Docker: `docker build -t lambda-pert5 . && docker run -it --rm -p 9000:9000 lambda-pert5`)*
@@ -75,7 +75,7 @@ Jika dosen mengharuskan penggunaan Docker base image resmi AWS (`public.ecr.aws/
 
 1. **Jalankan container**:
    ```bash
-   cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+   cd "/mnt/c/laragon/www/aws-lambda-practicum"
    docker build -t lambda-lokal .
    docker run --rm -p 9000:9000 lambda-lokal
    ```
@@ -109,7 +109,7 @@ Jika akun AWS Anda sudah habis kuotanya atau tidak bisa login, Anda tetap bisa m
 1. Pastikan Node.js sudah terinstall (cek dengan `node --version`)
 2. Buka terminal di folder proyek:
    ```bash
-   cd "C:\laragon\www\Pert 5 - Lambda"
+   cd "C:\laragon\www\aws-lambda-practicum"
    ```
 3. Jalankan server lokal:
    ```bash
@@ -117,14 +117,14 @@ Jika akun AWS Anda sudah habis kuotanya atau tidak bisa login, Anda tetap bisa m
    # atau:
    node local_server.mjs
    ```
-4. Buka browser: `http://localhost:3000`
+4. Buka browser: `http://localhost:9000`
 5. Output akan sama persis dengan AWS Lambda!
 
 #### Di WSL 2 (Ubuntu/Kali Linux):
 1. Buka terminal WSL 2
 2. Masuk ke folder proyek:
    ```bash
-   cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+   cd "/mnt/c/laragon/www/aws-lambda-practicum"
    ```
 3. Pastikan Node.js terinstall:
    ```bash
@@ -137,7 +137,7 @@ Jika akun AWS Anda sudah habis kuotanya atau tidak bisa login, Anda tetap bisa m
    ```
 5. Test dari terminal lain:
    ```bash
-   curl -i http://localhost:3000
+   curl -i http://localhost:9000
    ```
 
 ### Solusi B: Jalankan dengan Docker Container
@@ -150,16 +150,16 @@ Jika akun AWS Anda sudah habis kuotanya atau tidak bisa login, Anda tetap bisa m
    ```
 2. Build image:
    ```bash
-   cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+   cd "/mnt/c/laragon/www/aws-lambda-practicum"
    docker build -t lambda-lokal .
    ```
 3. Jalankan container:
    ```bash
-   docker run -d -p 3000:3000 --name lambda-container lambda-lokal
+   docker run -d -p 9000:9000 --name lambda-container lambda-lokal
    ```
 4. Test:
    ```bash
-   curl -i http://localhost:3000
+   curl -i http://localhost:9000
    ```
 5. Lihat logs:
    ```bash
@@ -172,7 +172,7 @@ Script `confirm_delete.sh` mensimulasikan proses menghapus Function URL dan Lamb
 
 ```bash
 # Dari WSL 2 / Ubuntu:
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 chmod +x confirm_delete.sh
 ./confirm_delete.sh
 ```
@@ -186,7 +186,7 @@ Script ini akan:
 
 | Fitur | AWS Lambda Asli | Setup Lokal (Tanpa Akun) |
 |-------|----------------|------------------------|
-| Function URL | HTTPS endpoint public | http://localhost:3000 |
+| Function URL | HTTPS endpoint public | http://localhost:9000 |
 | Runtime | AWS managed runtime | Node.js di komputer Anda |
 | Biaya | Per milidetik eksekusi | Gratis (resource lokal) |
 | Scalability | Auto-scale | 1 instance saja |
@@ -205,7 +205,7 @@ Baik di AWS asli maupun lokal, output akan **identik**:
 
 Untuk membuktikan ke dosen bahwa Anda telah menyelesaikan tugas:
 
-1. **Screenshot output HTML** dari browser (localhost:3000)
+1. **Screenshot output HTML** dari browser (localhost:9000)
 2. **Screenshot terminal** yang menunjukkan server berjalan
 3. **Screenshot curl** dari WSL 2 yang menampilkan HTTP 200
 4. **Screenshot script confirm_delete.sh** yang menunjukkan simulasi delete
@@ -235,13 +235,13 @@ LocalEmu adalah emulator AWS open-source yang mensimulasikan 133+ layanan AWS (L
 
 #### Option A: Menggunakan Script (Rekomendasi)
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 bash localemu-setup.sh
 ```
 
 #### Option B: Menggunakan Docker Compose
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 docker-compose up -d localemu
 ```
 
@@ -276,7 +276,7 @@ Dashboard menampilkan:
 
 ### Deploy Lambda ke LocalEmu:
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 bash deploy-lambda-localemu.sh
 ```
 
@@ -325,7 +325,7 @@ Lihat file **GUIDE_LOCALEMU.md** untuk panduan lengkap:
 
 ### Folder Utama:
 ```
-Pert 5 - Lambda/
+aws-lambda-practicum/
 ├── config/                          # Konfigurasi AWS (pisah)
 │   ├── aws-credentials.example      # Template credentials
 │   ├── aws-config.example          # Template config
@@ -388,7 +388,7 @@ terraform apply
 Gunakan script `setup-wsl.sh` untuk memilih metode setup:
 
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 bash setup-wsl.sh
 ```
 

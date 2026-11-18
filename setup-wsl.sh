@@ -21,7 +21,7 @@ case $choice in
     1)
         echo ""
         echo "Setup LocalEmu..."
-        cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+        cd "/mnt/c/laragon/www/aws-lambda-practicum"
         chmod +x localemu-setup.sh
         bash localemu-setup.sh
         echo ""
@@ -31,7 +31,7 @@ case $choice in
     2)
         echo ""
         echo "Setup Docker Simple..."
-        cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+        cd "/mnt/c/laragon/www/aws-lambda-practicum"
         docker build -t lambda-pert5 .
         docker stop lambda-container 2>/dev/null
         docker rm lambda-container 2>/dev/null

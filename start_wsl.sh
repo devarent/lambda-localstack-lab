@@ -9,7 +9,7 @@ echo "=========================================="
 echo ""
 
 # Masuk ke folder proyek
-cd "/mnt/c/laragon/www/Pert 5 - Lambda" || exit 1
+cd "/mnt/c/laragon/www/aws-lambda-practicum" || exit 1
 
 # Cek apakah container sudah ada
 if docker ps -a --format '{{.Names}}' | grep -q "lambda-container"; then

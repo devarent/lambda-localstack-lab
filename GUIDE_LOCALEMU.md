@@ -21,7 +21,7 @@ Setup ini menggunakan **LocalEmu** - emulator AWS open-source yang mensimulasika
 ## 🗂️ Struktur Folder
 
 ```
-Pert 5 - Lambda/
+aws-lambda-practicum/
 ├── config/                          # Konfigurasi AWS
 │   ├── aws-credentials.example      # Template credentials
 │   ├── aws-config.example          # Template config
@@ -49,14 +49,14 @@ Pert 5 - Lambda/
 #### Option A: Menggunakan Script (Rekomendasi)
 ```bash
 # Dari WSL 2 Ubuntu terminal:
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 chmod +x localemu-setup.sh
 bash localemu-setup.sh
 ```
 
 #### Option B: Menggunakan Docker Compose
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 docker-compose up -d localemu
 ```
 
@@ -103,7 +103,7 @@ export AWS_DEFAULT_REGION=us-east-1
 
 ### Langkah 2: Deploy Lambda (Menggunakan Script)
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 chmod +x deploy-lambda-localemu.sh
 bash deploy-lambda-localemu.sh
 ```
@@ -135,7 +135,7 @@ Atau buka Function URL di browser.
 
 ### Menggunakan Script:
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 chmod +x delete-lambda-localemu.sh
 bash delete-lambda-localemu.sh
 ```
@@ -202,7 +202,7 @@ nano config/aws-config
 
 ### Langkah:
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda/config/ec2"
+cd "/mnt/c/laragon/www/aws-lambda-practicum/config/ec2"
 
 # Initialize Terraform
 terraform init
@@ -232,7 +232,7 @@ terraform destroy
 
 ### Langkah:
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda/config/rds"
+cd "/mnt/c/laragon/www/aws-lambda-practicum/config/rds"
 
 # Initialize Terraform
 terraform init
@@ -267,7 +267,7 @@ terraform destroy
 
 ### Jalankan Semua Service:
 ```bash
-cd "/mnt/c/laragon/www/Pert 5 - Lambda"
+cd "/mnt/c/laragon/www/aws-lambda-practicum"
 docker-compose up -d
 ```
 
