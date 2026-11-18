@@ -416,3 +416,11 @@ Pilihan:
 - [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/)
 - [Docker Hub - LocalEmu](https://hub.docker.com/r/localemu/localemu)
 - [AWS Builder Center - Run Lambda Locally](https://builder.aws.com/content/3EdXXOR8w0AxTVeyUh8m7Bm5qxo/run-real-aws-lambda-on-your-laptop)
+
+---
+
+## Project Governance
+
+[![CI](https://github.com/aryafatthurahman4-collab/pert-5-lambda/actions/workflows/ci.yml/badge.svg)](https://github.com/aryafatthurahman4-collab/pert-5-lambda/actions/workflows/ci.yml)
+
+[Contributing](CONTRIBUTING.md) | [Security Policy](SECURITY.md) | [Code of Conduct](CODE_OF_CONDUCT.md)
