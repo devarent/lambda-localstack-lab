@@ -95,7 +95,7 @@ jobs:
           -p 4566:4566 \
           -p 4510-4559:4510-4559 \
           -v /var/run/docker.sock:/var/run/docker.sock \
-          --group-add docker \
+          --user root \
           -e DASHBOARD_API_OPEN=1 \
           localemu/localemu:latest
         sleep 10
@@ -159,4 +159,5 @@ jobs:
     - name: Cleanup
       if: always()
       run: |
-        docker stop localemu
+        docker stop localemu || true
+        docker rm -f localemu || true
