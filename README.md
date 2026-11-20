@@ -1,4 +1,38 @@
 
+<!-- identity-block -->
+<div align="center">
+
+# lambda-localstack-lab
+
+<sub>Panduan praktikum AWS Lambda tanpa akun AWS - LocalStack, Terraform, dan emulator lokal.</sub>
+
+</div>
+
+## At a glance
+
+| Field | Detail |
+| --- | --- |
+| Repository | lambda-localstack-lab |
+| Primary language | Shell |
+| Topics | aws, docker, lambda, localstack, praktikum, serverless, shell, terraform |
+| License | MIT |
+| Branch | main |
+| Maintainer | [@devarent](https://github.com/devarent) |
+
+## Overview
+
+lambda-localstack-lab is a hands-on repository focused on: Panduan praktikum AWS Lambda tanpa akun AWS - LocalStack, Terraform, dan emulator lokal.. Primary language: Shell. Topics: aws, docker, lambda, localstack, praktikum, serverless, shell, terraform. The README below documents the project; use the table above for a quick overview.
+
+### Global references
+
+<div align="center">
+
+🇮🇸 Iceland &middot; 🇳🇿 New Zealand &middot; 🇨🇭 Switzerland &middot; 🇸🇮 Slovenia &middot; 🇮🇪 Ireland &middot; 🇦🇹 Austria &middot; 🇵🇹 Portugal &middot; 🇸🇬 Singapore &middot; 🇫🇮 Finland
+
+</div>
+
+---
+
 <!-- dbx-style-kit -->
 <div align="center">
 
