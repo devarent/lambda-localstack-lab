@@ -36,7 +36,7 @@ lambda-localstack-lab is a hands-on repository focused on: Panduan praktikum AWS
 <!-- dbx-style-kit -->
 <div align="center">
 
-<img src="https://img.shields.io/badge/pert-5-lambda-1f6feb?style=for-the-badge" alt="pert-5-lambda" />
+<img src="https://img.shields.io/badge/lambda-localstack-lab-1f6feb?style=for-the-badge" alt="lambda-localstack-lab" />
 <img src="https://img.shields.io/badge/LANG%20Shell-3178c6?style=for-the-badge" alt="LANG Shell" />
 <img src="https://img.shields.io/badge/STARS%200-eab308?style=for-the-badge" alt="STARS 0" />
 <img src="https://img.shields.io/badge/LICENSE%20MIT-22c55e?style=for-the-badge" alt="LICENSE MIT" />
@@ -478,7 +478,7 @@ Pilihan:
 
 ## Project Governance
 
-[![CI](https://github.com/devarent/pert-5-lambda/actions/workflows/ci.yml/badge.svg)](https://github.com/devarent/pert-5-lambda/actions/workflows/ci.yml)
+[![CI](https://github.com/devarent/lambda-localstack-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/devarent/lambda-localstack-lab/actions/workflows/ci.yml)
 
 [Contributing](CONTRIBUTING.md) | [Security Policy](SECURITY.md) | [Code of Conduct](CODE_OF_CONDUCT.md)
 
