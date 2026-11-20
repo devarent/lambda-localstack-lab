@@ -1,3 +1,13 @@
+# Lambda-Localstack-Lab
+<sub><span style="opacity: 0.85">Panduan praktikum AWS Lambda tanpa akun AWS - LocalStack, Terraform, dan emulator lokal.</span></sub>
+<div align="center" style="font-size: 0.9em">
+<img src="assets/brand-logo.svg" alt="Arya Fatthurahman" width="130px" />
+</div>
+
+[![CI](https://github.com/devarent/lambda-localstack-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/devarent/lambda-localstack-lab/actions/workflows/ci.yml)
+
+---
+
 
 <!-- identity-block -->
 <div align="center">
@@ -601,3 +611,9 @@ Pilihan:
 <div align="center">
 <sub>Hands-on engineering, built and documented in the open.</sub>
 </div>
+## Quickstart
+
+```bash
+cd <repo>
+# Setup instructions are in the project sections above.
+```
